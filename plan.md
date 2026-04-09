@@ -2,7 +2,7 @@
 
 ## ECE 9463 Hardware design - Spring 2026
 
-## ## Project Team
+## Project Team
 
 - Brendan Sweezy
 - Leo Wang
