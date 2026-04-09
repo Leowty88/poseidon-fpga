@@ -16,3 +16,5 @@ This IP implements the Poseidon hash function (used in zero-knowledge proofs). T
 ## IP architecture 
 
 The IP is centered around a single 24-lane state register that holds the full Poseidon state throughout the execution. The input data is first loaded into the 24-lane state register. After that, a controller drives the datapath through each Poseidon round by indicating when to add constants, perform S-box computation, and execute the MDS mixing. The S-box supports both full rounds and partial rounds, while the shared arithmetic units handle the modular operations used throughout the design. After all rounds are complete, the squeeze logic reads the result from the state and outputs the final hash.  
+
+The IP will use an AXI4-Lite interface for control (start, reset, status) and AXI4-Stream via AXI DMA for input/output data transfer.
