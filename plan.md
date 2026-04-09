@@ -1,8 +1,11 @@
 # Poseidon FPGA 
 
-## ECE 9463 Hardware design 
+## ECE 9463 Hardware design - Spring 2026
 
-## Spring 2026
+## ## Project Team
+
+- Brendan Sweezy
+- Leo Wang
 
 
 ## IP defention 
