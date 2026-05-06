@@ -1,0 +1,78 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/bcs7944/poseidon-fpga/run_hls.tcl:21:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=poseidon_top" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:32:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=in_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:33:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="axis port=out_stream" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:34:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:35:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=round_constants offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:36:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi port=mds_matrix offset=slave" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=state complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:43:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:54:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:60:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:71:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="variable=next_state complete" ARG_PragmaType="array_partition" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:74:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:77:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:86:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="poseidon.cpp:93:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="poseidon_top" ARG_PragmaIsValid="1" ARG_PragmaOptions="II=1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="poseidon.cpp:76:22" msg_body="Loop 'mds_col' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="mds_col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="poseidon.cpp:31:0" msg_body="Unrolling loop 'rc_add' (poseidon.cpp:53:17) in function 'poseidon_top' completely with a factor of 24">
+        <args Factor="24" LoopLoc="poseidon.cpp:53:17" LoopName="rc_add"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="poseidon.cpp:31:0" msg_body="Unrolling loop 'sbox_layer' (poseidon.cpp:59:21) in function 'poseidon_top' completely with a factor of 24">
+        <args Factor="24" LoopLoc="poseidon.cpp:59:21" LoopName="sbox_layer"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="poseidon.cpp:31:0" msg_body="Unrolling loop 'mds_col' (poseidon.cpp:76:22) in function 'poseidon_top' completely with a factor of 24">
+        <args Factor="24" LoopLoc="poseidon.cpp:76:22" LoopName="mds_col"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-186" msg_severity="INFO" msg_loc="poseidon.cpp:31:0" msg_body="Unrolling loop 'VITIS_LOOP_85_2' (poseidon.cpp:85:26) in function 'poseidon_top' completely with a factor of 24">
+        <args Factor="24" LoopLoc="poseidon.cpp:85:26" LoopName="VITIS_LOOP_85_2"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="poseidon.cpp:20:0" msg_body="Inlining function 'mod_mul(ap_uint&lt;256&gt;, ap_uint&lt;256&gt;) (.3.6.10)' into 'sbox_quintic(ap_uint&lt;256&gt;)'">
+        <args Callee="mod_mul(ap_uint&lt;256&gt;, ap_uint&lt;256&gt;) (.3.6.10)" Callee-DebugLoc="File poseidon.cpp Line 13 Column 0" Caller="sbox_quintic(ap_uint&lt;256&gt;)" Caller-DebugLoc="File poseidon.cpp Line 20 Column 0"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="poseidon.cpp:38:10" msg_body="Applying array_partition to 'state': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="state"/>
+    </msg>
+    <msg msg_groups="PRAGMA_MISC" msg_id="214-248" msg_severity="INFO" msg_loc="poseidon.cpp:70:17" msg_body="Applying array_partition to 'next_state': Complete partitioning on dimension 1.">
+        <args Dim="1" Mode="Complete" UOName="next_state"/>
+    </msg>
+    <msg msg_groups="AUTOMATION" msg_id="214-364" msg_severity="INFO" msg_loc="poseidon.cpp:78:17" msg_body="Automatically inlining function 'mod_mul(ap_uint&lt;256&gt;, ap_uint&lt;256&gt;) (.3.6.10)' to improve effectiveness of pipeline pragma in function 'poseidon_top(hls::stream&lt;axis_word, 0&gt;&amp;, hls::stream&lt;axis_word, 0&gt;&amp;, ap_uint&lt;256&gt;*, ap_uint&lt;256&gt; (*) [24])'">
+        <args Callee="mod_mul(ap_uint&lt;256&gt;, ap_uint&lt;256&gt;) (.3.6.10)" Callee-DebugLoc="File poseidon.cpp Line 13 Column 0" Caller="poseidon_top(hls::stream&lt;axis_word, 0&gt;&amp;, hls::stream&lt;axis_word, 0&gt;&amp;, ap_uint&lt;256&gt;*, ap_uint&lt;256&gt; (*) [24])" Caller-DebugLoc="File poseidon.cpp Line 31 Column 0"/>
+    </msg>
+    <msg msg_groups="AUTOMATION" msg_id="214-364" msg_severity="INFO" msg_loc="poseidon.cpp:79:23" msg_body="Automatically inlining function 'mod_add(ap_uint&lt;256&gt;, ap_uint&lt;256&gt;)' to improve effectiveness of pipeline pragma in function 'poseidon_top(hls::stream&lt;axis_word, 0&gt;&amp;, hls::stream&lt;axis_word, 0&gt;&amp;, ap_uint&lt;256&gt;*, ap_uint&lt;256&gt; (*) [24])'">
+        <args Callee="mod_add(ap_uint&lt;256&gt;, ap_uint&lt;256&gt;)" Callee-DebugLoc="File poseidon.cpp Line 4 Column 0" Caller="poseidon_top(hls::stream&lt;axis_word, 0&gt;&amp;, hls::stream&lt;axis_word, 0&gt;&amp;, ap_uint&lt;256&gt;*, ap_uint&lt;256&gt; (*) [24])" Caller-DebugLoc="File poseidon.cpp Line 31 Column 0"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

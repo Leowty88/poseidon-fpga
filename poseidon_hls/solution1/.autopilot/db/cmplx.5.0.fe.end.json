@@ -1,0 +1,83 @@
+{
+    "1": {
+        "name": "poseidon_top_Pipeline_VITIS_LOOP_92_3",
+        "file": "poseidon.cpp",
+        "fileloc": "92",
+        "instructions": "44",
+        "total_instructions": "44",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "poseidon_top",
+        "file": "poseidon.cpp",
+        "fileloc": "26",
+        "instructions": "435",
+        "total_instructions": "1366",
+        "calls": "3 1 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 4",
+        "basicblocks": "6",
+        "loads": {
+            "L": "50"
+        },
+        "stores": {
+            "L": "4"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "2": {
+        "name": "sbox_quintic",
+        "file": "poseidon.cpp",
+        "fileloc": "21",
+        "instructions": "13",
+        "total_instructions": "13",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "poseidon_top_Pipeline_VITIS_LOOP_42_1",
+        "file": "poseidon.cpp",
+        "fileloc": "38",
+        "instructions": "89",
+        "total_instructions": "89",
+        "calls": "",
+        "basicblocks": "29",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "50"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "4": {
+        "name": "poseidon_top_Pipeline_mds_row",
+        "file": "poseidon.cpp",
+        "fileloc": "70",
+        "instructions": "486",
+        "total_instructions": "486",
+        "calls": "",
+        "basicblocks": "29",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "50"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

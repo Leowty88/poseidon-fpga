@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vitis HLS Report for 'poseidon_top_Pipeline_VITIS_LOOP_42_1'
+================================================================
+* Date:           Wed May  6 11:50:37 2026
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        poseidon_hls
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  5.956 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       26|       26|  0.260 us|  0.260 us|   26|   26|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_42_1  |       24|       24|         1|          1|          1|    24|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     30|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       -|    252|    -|
+|Register         |        -|    -|       7|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|       7|    282|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |add_ln42_fu_294_p2                |         +|   0|  0|  13|           5|           1|
+    |ap_condition_191                  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln42_fu_288_p2               |      icmp|   0|  0|  13|           5|           5|
+    |ap_block_state1_pp0_stage0_iter0  |        or|   0|  0|   2|           1|           1|
+    +----------------------------------+----------+----+---+----+------------+------------+
+    |Total                             |          |   0|  0|  30|          12|           8|
+    +----------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------------+----+-----------+-----+-----------+
+    |              Name             | LUT| Input Size| Bits| Total Bits|
+    +-------------------------------+----+-----------+-----+-----------+
+    |ap_done_int                    |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2           |   9|          2|    5|         10|
+    |arrayidx11_10_promoted77_out   |   9|          2|  256|        512|
+    |arrayidx11_11_promoted79_out   |   9|          2|  256|        512|
+    |arrayidx11_12_promoted81_out   |   9|          2|  256|        512|
+    |arrayidx11_13_promoted83_out   |   9|          2|  256|        512|
+    |arrayidx11_14_promoted85_out   |   9|          2|  256|        512|
+    |arrayidx11_15_promoted87_out   |   9|          2|  256|        512|
+    |arrayidx11_16_promoted89_out   |   9|          2|  256|        512|
+    |arrayidx11_17_promoted91_out   |   9|          2|  256|        512|
+    |arrayidx11_18_promoted93_out   |   9|          2|  256|        512|
+    |arrayidx11_19_promoted95_out   |   9|          2|  256|        512|
+    |arrayidx11_1_promoted59_out    |   9|          2|  256|        512|
+    |arrayidx11_20_promoted97_out   |   9|          2|  256|        512|
+    |arrayidx11_21_promoted99_out   |   9|          2|  256|        512|
+    |arrayidx11_22_promoted101_out  |   9|          2|  256|        512|
+    |arrayidx11_23_promoted103_out  |   9|          2|  256|        512|
+    |arrayidx11_2_promoted61_out    |   9|          2|  256|        512|
+    |arrayidx11_3_promoted63_out    |   9|          2|  256|        512|
+    |arrayidx11_4_promoted65_out    |   9|          2|  256|        512|
+    |arrayidx11_5_promoted67_out    |   9|          2|  256|        512|
+    |arrayidx11_6_promoted69_out    |   9|          2|  256|        512|
+    |arrayidx11_7_promoted71_out    |   9|          2|  256|        512|
+    |arrayidx11_8_promoted73_out    |   9|          2|  256|        512|
+    |arrayidx11_9_promoted75_out    |   9|          2|  256|        512|
+    |arrayidx82_promoted57_out      |   9|          2|  256|        512|
+    |i_fu_126                       |   9|          2|    5|         10|
+    |in_stream_TDATA_blk_n          |   9|          2|    1|          2|
+    +-------------------------------+----+-----------+-----+-----------+
+    |Total                          | 252|         56| 6156|      12312|
+    +-------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------+---+----+-----+-----------+
+    |     Name    | FF| LUT| Bits| Const Bits|
+    +-------------+---+----+-----+-----------+
+    |ap_CS_fsm    |  1|   0|    1|          0|
+    |ap_done_reg  |  1|   0|    1|          0|
+    |i_fu_126     |  5|   0|    5|          0|
+    +-------------+---+----+-----+-----------+
+    |Total        |  7|   0|    7|          0|
+    +-------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------------------+-----+-----+------------+---------------------------------------+--------------+
+|               RTL Ports              | Dir | Bits|  Protocol  |             Source Object             |    C Type    |
++--------------------------------------+-----+-----+------------+---------------------------------------+--------------+
+|ap_clk                                |   in|    1|  ap_ctrl_hs|  poseidon_top_Pipeline_VITIS_LOOP_42_1|  return value|
+|ap_rst                                |   in|    1|  ap_ctrl_hs|  poseidon_top_Pipeline_VITIS_LOOP_42_1|  return value|
+|ap_start                              |   in|    1|  ap_ctrl_hs|  poseidon_top_Pipeline_VITIS_LOOP_42_1|  return value|
+|ap_done                               |  out|    1|  ap_ctrl_hs|  poseidon_top_Pipeline_VITIS_LOOP_42_1|  return value|
+|ap_idle                               |  out|    1|  ap_ctrl_hs|  poseidon_top_Pipeline_VITIS_LOOP_42_1|  return value|
+|ap_ready                              |  out|    1|  ap_ctrl_hs|  poseidon_top_Pipeline_VITIS_LOOP_42_1|  return value|
+|in_stream_TVALID                      |   in|    1|        axis|                              in_stream|       pointer|
+|in_stream_TDATA                       |   in|  512|        axis|                              in_stream|       pointer|
+|in_stream_TREADY                      |  out|    1|        axis|                              in_stream|       pointer|
+|arrayidx11_23_promoted103_out         |  out|  256|      ap_vld|          arrayidx11_23_promoted103_out|       pointer|
+|arrayidx11_23_promoted103_out_ap_vld  |  out|    1|      ap_vld|          arrayidx11_23_promoted103_out|       pointer|
+|arrayidx11_22_promoted101_out         |  out|  256|      ap_vld|          arrayidx11_22_promoted101_out|       pointer|
+|arrayidx11_22_promoted101_out_ap_vld  |  out|    1|      ap_vld|          arrayidx11_22_promoted101_out|       pointer|
+|arrayidx11_21_promoted99_out          |  out|  256|      ap_vld|           arrayidx11_21_promoted99_out|       pointer|
+|arrayidx11_21_promoted99_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_21_promoted99_out|       pointer|
+|arrayidx11_20_promoted97_out          |  out|  256|      ap_vld|           arrayidx11_20_promoted97_out|       pointer|
+|arrayidx11_20_promoted97_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_20_promoted97_out|       pointer|
+|arrayidx11_19_promoted95_out          |  out|  256|      ap_vld|           arrayidx11_19_promoted95_out|       pointer|
+|arrayidx11_19_promoted95_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_19_promoted95_out|       pointer|
+|arrayidx11_18_promoted93_out          |  out|  256|      ap_vld|           arrayidx11_18_promoted93_out|       pointer|
+|arrayidx11_18_promoted93_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_18_promoted93_out|       pointer|
+|arrayidx11_17_promoted91_out          |  out|  256|      ap_vld|           arrayidx11_17_promoted91_out|       pointer|
+|arrayidx11_17_promoted91_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_17_promoted91_out|       pointer|
+|arrayidx11_16_promoted89_out          |  out|  256|      ap_vld|           arrayidx11_16_promoted89_out|       pointer|
+|arrayidx11_16_promoted89_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_16_promoted89_out|       pointer|
+|arrayidx11_15_promoted87_out          |  out|  256|      ap_vld|           arrayidx11_15_promoted87_out|       pointer|
+|arrayidx11_15_promoted87_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_15_promoted87_out|       pointer|
+|arrayidx11_14_promoted85_out          |  out|  256|      ap_vld|           arrayidx11_14_promoted85_out|       pointer|
+|arrayidx11_14_promoted85_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_14_promoted85_out|       pointer|
+|arrayidx11_13_promoted83_out          |  out|  256|      ap_vld|           arrayidx11_13_promoted83_out|       pointer|
+|arrayidx11_13_promoted83_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_13_promoted83_out|       pointer|
+|arrayidx11_12_promoted81_out          |  out|  256|      ap_vld|           arrayidx11_12_promoted81_out|       pointer|
+|arrayidx11_12_promoted81_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_12_promoted81_out|       pointer|
+|arrayidx11_11_promoted79_out          |  out|  256|      ap_vld|           arrayidx11_11_promoted79_out|       pointer|
+|arrayidx11_11_promoted79_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_11_promoted79_out|       pointer|
+|arrayidx11_10_promoted77_out          |  out|  256|      ap_vld|           arrayidx11_10_promoted77_out|       pointer|
+|arrayidx11_10_promoted77_out_ap_vld   |  out|    1|      ap_vld|           arrayidx11_10_promoted77_out|       pointer|
+|arrayidx11_9_promoted75_out           |  out|  256|      ap_vld|            arrayidx11_9_promoted75_out|       pointer|
+|arrayidx11_9_promoted75_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_9_promoted75_out|       pointer|
+|arrayidx11_8_promoted73_out           |  out|  256|      ap_vld|            arrayidx11_8_promoted73_out|       pointer|
+|arrayidx11_8_promoted73_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_8_promoted73_out|       pointer|
+|arrayidx11_7_promoted71_out           |  out|  256|      ap_vld|            arrayidx11_7_promoted71_out|       pointer|
+|arrayidx11_7_promoted71_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_7_promoted71_out|       pointer|
+|arrayidx11_6_promoted69_out           |  out|  256|      ap_vld|            arrayidx11_6_promoted69_out|       pointer|
+|arrayidx11_6_promoted69_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_6_promoted69_out|       pointer|
+|arrayidx11_5_promoted67_out           |  out|  256|      ap_vld|            arrayidx11_5_promoted67_out|       pointer|
+|arrayidx11_5_promoted67_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_5_promoted67_out|       pointer|
+|arrayidx11_4_promoted65_out           |  out|  256|      ap_vld|            arrayidx11_4_promoted65_out|       pointer|
+|arrayidx11_4_promoted65_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_4_promoted65_out|       pointer|
+|arrayidx11_3_promoted63_out           |  out|  256|      ap_vld|            arrayidx11_3_promoted63_out|       pointer|
+|arrayidx11_3_promoted63_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_3_promoted63_out|       pointer|
+|arrayidx11_2_promoted61_out           |  out|  256|      ap_vld|            arrayidx11_2_promoted61_out|       pointer|
+|arrayidx11_2_promoted61_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_2_promoted61_out|       pointer|
+|arrayidx11_1_promoted59_out           |  out|  256|      ap_vld|            arrayidx11_1_promoted59_out|       pointer|
+|arrayidx11_1_promoted59_out_ap_vld    |  out|    1|      ap_vld|            arrayidx11_1_promoted59_out|       pointer|
+|arrayidx82_promoted57_out             |  out|  256|      ap_vld|              arrayidx82_promoted57_out|       pointer|
+|arrayidx82_promoted57_out_ap_vld      |  out|    1|      ap_vld|              arrayidx82_promoted57_out|       pointer|
++--------------------------------------+-----+-----+------------+---------------------------------------+--------------+
+

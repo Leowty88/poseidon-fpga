@@ -1,0 +1,1155 @@
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: poseidon.cpp, Line: 76, Column: 22 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Loop '''
+  - LoopName:        mds_col
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        rc_add
+  - String:          ''' ('
+  - LoopLoc:         'poseidon.cpp:53:17'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          poseidon_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '24'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        sbox_layer
+  - String:          ''' ('
+  - LoopLoc:         'poseidon.cpp:59:21'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          poseidon_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '24'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        mds_col
+  - String:          ''' ('
+  - LoopLoc:         'poseidon.cpp:76:22'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          poseidon_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '24'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_85_2
+  - String:          ''' ('
+  - LoopLoc:         'poseidon.cpp:85:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          poseidon_top
+  - String:          ''' completely with a factor of '
+  - Factor:          '24'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: poseidon.cpp, Line: 20, Column: 0 }
+Function:        _Z12sbox_quintic7ap_uintILi256EE
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'sbox_quintic(ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 20, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: poseidon.cpp, Line: 38, Column: 10 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          state
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-array-partition
+Name:            ArrayXform
+DebugLoc:        { File: poseidon.cpp, Line: 70, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Applying '
+  - String:          array_partition
+  - String:          ' to '''
+  - UOName:          next_state
+  - String:          ''':'
+  - String:          ' '
+  - Mode:            Complete
+  - String:          ' partitioning'
+  - String:          ' on dimension '
+  - Dim:             '1'
+  - String:          .
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+Function:        apatb_poseidon_top_ir
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        maxi
+  - String:          ' variable '''
+  - Name:            mds_matrix
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=none'
+  - String:          ' mode in '
+  - Bitwidth:        '256'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: poseidon.cpp, Line: 50, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '1632'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        round_constants1seq
+  - ArrayName:       round_constants
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        permutation_loop
+  - String:          ' '
+  - LoopLoc:         'poseidon.cpp:50:23'
+  - String:          ' '
+  - Function:        'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.81
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.90
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.99
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.108
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.117
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.126
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.135
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.144
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.153
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.162
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.171
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.180
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.189
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.198
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.207
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.216
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.225
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.234
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.243
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.252
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.261
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.270
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.279
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 55, Column: 31 }
+  - OrigDirection:   read
+  - OrigID:          rc_add.load.288
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: poseidon.cpp, Line: 73, Column: 11 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '576'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        mds_matrix2seq
+  - ArrayName:       mds_matrix
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        mds_row
+  - String:          ' '
+  - LoopLoc:         'poseidon.cpp:73:11'
+  - String:          ' '
+  - Function:        'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.103
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.121
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.139
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.157
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.175
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.193
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.211
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.229
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.247
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.265
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.283
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.301
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.319
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.337
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.355
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.373
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.391
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.409
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.427
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.445
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.463
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.481
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.499
+  - OrigAccess:      load
+    DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 35 }
+  - OrigDirection:   read
+  - OrigID:          mds_col.load.517
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: poseidon.cpp, Line: 73, Column: 11 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: poseidon.cpp, Line: 73, Column: 11 }
+  - OrigDirection:   read
+  - OrigID:          mds_matrix2seq
+  - ArrayName:       mds_matrix
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        permutation_loop
+  - String:          ' '
+  - LoopLoc:         'poseidon.cpp:50:23'
+  - String:          ' '
+  - Function:        'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: poseidon.cpp, Line: 73, Column: 11 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: poseidon.cpp, Line: 73, Column: 11 }
+  - OrigDirection:   read
+  - OrigID:          mds_matrix2seq
+  - ArrayName:       mds_matrix
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        mds_row
+  - String:          ' '
+  - LoopLoc:         'poseidon.cpp:73:11'
+  - String:          ' '
+  - Function:        'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: poseidon.cpp, Line: 50, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i256
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '0'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: poseidon.cpp, Line: 50, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          round_constants1seq
+  - ArrayName:       round_constants
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        permutation_loop
+  - String:          ' '
+  - LoopLoc:         'poseidon.cpp:50:23'
+  - String:          ' '
+  - Function:        'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 78, Column: 17 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)'
+    DebugLoc:        { File: poseidon.cpp, Line: 13, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-auto-inline-performance-driven
+Name:            AutoInlinePerf
+DebugLoc:        { File: poseidon.cpp, Line: 79, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Automatically inlining function '''
+  - Callee:          'mod_add(ap_uint<256>, ap_uint<256>)'
+    DebugLoc:        { File: poseidon.cpp, Line: 4, Column: 0 }
+  - String:          ''' to improve effectiveness of pipeline pragma in function '''
+  - Caller:          'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            BurstConflict
+DebugLoc:        { File: poseidon.cpp, Line: 50, Column: 23 }
+Function:        _Z12poseidon_topRN3hls6streamI9axis_wordLi0EEES3_P7ap_uintILi256EEPA24_S5_
+Args:            
+  - String:          'Could not burst due to multiple potential '
+  - Direction:       reads
+  - String:          ' to the same bundle in the same region.'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: poseidon.cpp, Line: 50, Column: 23 }
+  - OrigDirection:   read
+  - OrigID:          seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - Function:        'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])'
+    DebugLoc:        { File: poseidon.cpp, Line: 31, Column: 0 }
+  - String:          ' '
+...

@@ -1,0 +1,42 @@
+{
+  "0": {
+    "basicblocks": 64,
+    "calls": "2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+    "file": "poseidon.cpp",
+    "fileloc": 26,
+    "instructions": 896,
+    "loads": {
+      "L": 50,
+      "T": 48
+    },
+    "name": "poseidon_top",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 1710
+  },
+  "1": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "poseidon.cpp",
+    "fileloc": 20,
+    "instructions": 22,
+    "name": "sbox_quintic",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 22
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "poseidon.cpp",
+    "fileloc": 4,
+    "instructions": 11,
+    "name": "mod_add",
+    "stores": {
+      "L": 2
+    },
+    "total_instructions": 11
+  }
+}

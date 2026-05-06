@@ -1,0 +1,468 @@
+
+
+================================================================
+== Synthesis Summary Report of 'poseidon_top'
+================================================================
++ General Information: 
+    * Date:           Wed May  6 11:50:40 2026
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        poseidon_hls
+    * Solution:       solution1 (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg484-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+---------------+---------------+---------------+-----+
+    |                  Modules                 |  Issue |       | Latency |  Latency  | Iteration|         | Trip |          |          |               |               |               |     |
+    |                  & Loops                 |  Type  | Slack | (cycles)|    (ns)   |  Latency | Interval| Count| Pipelined|   BRAM   |      DSP      |       FF      |      LUT      | URAM|
+    +------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+---------------+---------------+---------------+-----+
+    |+ poseidon_top                            |  Timing|  -1.94|   293274|  2.933e+06|         -|   293275|     -|        no|  30 (10%)|  21495 (9770%)|  564658 (530%)|  311726 (585%)|    -|
+    | + poseidon_top_Pipeline_VITIS_LOOP_42_1  |       -|   1.34|       26|    260.000|         -|       26|     -|        no|         -|              -|        7 (~0%)|      282 (~0%)|    -|
+    |  o VITIS_LOOP_42_1                       |       -|   7.30|       24|    240.000|         1|        1|    24|       yes|         -|              -|              -|              -|    -|
+    | + poseidon_top_Pipeline_VITIS_LOOP_92_3  |       -|   2.34|       26|    260.000|         -|       26|     -|        no|         -|              -|      265 (~0%)|      203 (~0%)|    -|
+    |  o VITIS_LOOP_92_3                       |       -|   7.30|       24|    240.000|         2|        1|    24|       yes|         -|              -|              -|              -|    -|
+    | o permutation_loop                       |       -|   7.30|   293216|  2.932e+06|      4312|        -|    68|        no|         -|              -|              -|              -|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + sbox_quintic                          |       -|   0.32|     1559|  1.559e+04|         -|     1559|     -|        no|         -|     915 (415%)|      8028 (7%)|      4877 (9%)|    -|
+    |  + poseidon_top_Pipeline_mds_row         |  Timing|  -1.94|     1154|  1.154e+04|         -|     1154|     -|        no|         -|     450 (204%)|  297057 (279%)|  178258 (335%)|    -|
+    |   o mds_row                              |      II|   7.30|     1152|  1.152e+04|       601|       24|    24|       yes|         -|              -|              -|              -|    -|
+    +------------------------------------------+--------+-------+---------+-----------+----------+---------+------+----------+----------+---------------+---------------+---------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | 256 -> 256 | 64            | 0       | slave  | 0        | 0         | 16           | 16           | 16          | 16          | BRAM=30           |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register          | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL              | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER              | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER            | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR            | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
+| s_axi_control | round_constants_1 | 0x10   | 32    | W      | Data signal of round_constants   |                                                                      |
+| s_axi_control | round_constants_2 | 0x14   | 32    | W      | Data signal of round_constants   |                                                                      |
+| s_axi_control | mds_matrix_1      | 0x1c   | 32    | W      | Data signal of mds_matrix        |                                                                      |
+| s_axi_control | mds_matrix_2      | 0x20   | 32    | W      | Data signal of mds_matrix        |                                                                      |
++---------------+-------------------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++------------+-----------+---------------+-------+--------+--------+
+| Interface  | Direction | Register Mode | TDATA | TREADY | TVALID |
++------------+-----------+---------------+-------+--------+--------+
+| in_stream  | in        | both          | 512   | 1      | 1      |
+| out_stream | out       | both          | 512   | 1      | 1      |
++------------+-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-----------------+-----------+-----------------------+
+| Argument        | Direction | Datatype              |
++-----------------+-----------+-----------------------+
+| in_stream       | in        | stream<axis_word, 0>& |
+| out_stream      | out       | stream<axis_word, 0>& |
+| round_constants | in        | ap_uint<256>*         |
+| mds_matrix      | in        | ap_uint<256>*         |
++-----------------+-----------+-----------------------+
+
+* SW-to-HW Mapping
++-----------------+---------------+-----------+----------+---------------------------------------------+
+| Argument        | HW Interface  | HW Type   | HW Usage | HW Info                                     |
++-----------------+---------------+-----------+----------+---------------------------------------------+
+| in_stream       | in_stream     | interface |          |                                             |
+| out_stream      | out_stream    | interface |          |                                             |
+| round_constants | m_axi_gmem    | interface |          |                                             |
+| round_constants | s_axi_control | register  | offset   | name=round_constants_1 offset=0x10 range=32 |
+| round_constants | s_axi_control | register  | offset   | name=round_constants_2 offset=0x14 range=32 |
+| mds_matrix      | m_axi_gmem    | interface |          |                                             |
+| mds_matrix      | s_axi_control | register  | offset   | name=mds_matrix_1 offset=0x1c range=32      |
+| mds_matrix      | s_axi_control | register  | offset   | name=mds_matrix_2 offset=0x20 range=32      |
++-----------------+---------------+-----------+----------+---------------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* All M_AXI Variable Accesses
++--------------+-----------------+--------------------+-----------+--------------+--------+------------------+--------------------+------------+--------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable        | Access Location    | Direction | Burst Status | Length | Loop             | Loop Location      | Resolution | Problem                                                                                                |
++--------------+-----------------+--------------------+-----------+--------------+--------+------------------+--------------------+------------+--------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   |                 | poseidon.cpp:50:23 | read      | Fail         |        |                  |                    | 214-224    | Could not burst due to multiple potential reads to the same bundle in the same region.                 |
+| m_axi_gmem   | round_constants | poseidon.cpp:55:31 | read      | Widen Fail   |        | permutation_loop | poseidon.cpp:50:23 | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | round_constants | poseidon.cpp:55:31 | read      | Inferred     | 1632   | permutation_loop | poseidon.cpp:50:23 |            |                                                                                                        |
+| m_axi_gmem   | mds_matrix      | poseidon.cpp:78:35 | read      | Widen Fail   |        | mds_row          | poseidon.cpp:73:11 | 214-353    | Could not widen since type i256 size is greater than or equal to the max_widen_bitwidth threshold of 0 |
+| m_axi_gmem   | mds_matrix      | poseidon.cpp:78:35 | read      | Fail         |        | permutation_loop | poseidon.cpp:50:23 | 214-229    | Could not analyze pattern                                                                              |
+| m_axi_gmem   | mds_matrix      | poseidon.cpp:78:35 | read      | Inferred     | 576    | mds_row          | poseidon.cpp:73:11 |            |                                                                                                        |
++--------------+-----------------+--------------------+-----------+--------------+--------+------------------+--------------------+------------+--------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------+-------+--------+-------------+-----+--------+---------+
+| Name                                      | DSP   | Pragma | Variable    | Op  | Impl   | Latency |
++-------------------------------------------+-------+--------+-------------+-----+--------+---------+
+| + poseidon_top                            | 21495 |        |             |     |        |         |
+|   add_ln55_8_fu_1286_p2                   |       |        | add_ln55_8  | add | fabric | 0       |
+|   add_ln55_10_fu_1292_p2                  |       |        | add_ln55_10 | add | fabric | 0       |
+|   add_ln55_12_fu_1298_p2                  |       |        | add_ln55_12 | add | fabric | 0       |
+|   add_ln55_14_fu_1304_p2                  |       |        | add_ln55_14 | add | fabric | 0       |
+|   add_ln55_16_fu_1310_p2                  |       |        | add_ln55_16 | add | fabric | 0       |
+|   add_ln55_18_fu_1316_p2                  |       |        | add_ln55_18 | add | fabric | 0       |
+|   add_ln55_20_fu_1322_p2                  |       |        | add_ln55_20 | add | fabric | 0       |
+|   add_ln55_22_fu_1328_p2                  |       |        | add_ln55_22 | add | fabric | 0       |
+|   add_ln55_24_fu_1334_p2                  |       |        | add_ln55_24 | add | fabric | 0       |
+|   add_ln55_26_fu_1340_p2                  |       |        | add_ln55_26 | add | fabric | 0       |
+|   add_ln55_28_fu_1346_p2                  |       |        | add_ln55_28 | add | fabric | 0       |
+|   add_ln55_30_fu_1352_p2                  |       |        | add_ln55_30 | add | fabric | 0       |
+|   add_ln55_32_fu_1358_p2                  |       |        | add_ln55_32 | add | fabric | 0       |
+|   add_ln55_34_fu_1364_p2                  |       |        | add_ln55_34 | add | fabric | 0       |
+|   add_ln55_36_fu_1370_p2                  |       |        | add_ln55_36 | add | fabric | 0       |
+|   add_ln55_38_fu_1376_p2                  |       |        | add_ln55_38 | add | fabric | 0       |
+|   r_2_fu_1391_p2                          |       |        | r_2         | add | fabric | 0       |
+|   add_ln55_fu_1404_p2                     |       |        | add_ln55    | add | fabric | 0       |
+|   add_ln55_1_fu_1538_p2                   |       |        | add_ln55_1  | add | fabric | 0       |
+|   add_ln55_2_fu_1562_p2                   |       |        | add_ln55_2  | add | fabric | 0       |
+|   add_ln55_3_fu_1586_p2                   |       |        | add_ln55_3  | add | fabric | 0       |
+|   add_ln55_4_fu_1610_p2                   |       |        | add_ln55_4  | add | fabric | 0       |
+|   add_ln55_5_fu_1634_p2                   |       |        | add_ln55_5  | add | fabric | 0       |
+|   add_ln55_6_fu_1658_p2                   |       |        | add_ln55_6  | add | fabric | 0       |
+|   add_ln55_7_fu_1682_p2                   |       |        | add_ln55_7  | add | fabric | 0       |
+|   add_ln55_9_fu_1409_p2                   |       |        | add_ln55_9  | add | fabric | 0       |
+|   add_ln55_11_fu_1414_p2                  |       |        | add_ln55_11 | add | fabric | 0       |
+|   add_ln55_13_fu_1419_p2                  |       |        | add_ln55_13 | add | fabric | 0       |
+|   add_ln55_15_fu_1424_p2                  |       |        | add_ln55_15 | add | fabric | 0       |
+|   add_ln55_17_fu_1429_p2                  |       |        | add_ln55_17 | add | fabric | 0       |
+|   add_ln55_19_fu_1434_p2                  |       |        | add_ln55_19 | add | fabric | 0       |
+|   add_ln55_21_fu_1439_p2                  |       |        | add_ln55_21 | add | fabric | 0       |
+|   add_ln55_23_fu_1444_p2                  |       |        | add_ln55_23 | add | fabric | 0       |
+|   add_ln55_25_fu_1449_p2                  |       |        | add_ln55_25 | add | fabric | 0       |
+|   add_ln55_27_fu_1454_p2                  |       |        | add_ln55_27 | add | fabric | 0       |
+|   add_ln55_29_fu_1459_p2                  |       |        | add_ln55_29 | add | fabric | 0       |
+|   add_ln55_31_fu_1464_p2                  |       |        | add_ln55_31 | add | fabric | 0       |
+|   add_ln55_33_fu_1469_p2                  |       |        | add_ln55_33 | add | fabric | 0       |
+|   add_ln55_35_fu_1474_p2                  |       |        | add_ln55_35 | add | fabric | 0       |
+|   add_ln55_37_fu_1479_p2                  |       |        | add_ln55_37 | add | fabric | 0       |
+|   add_ln55_39_fu_1484_p2                  |       |        | add_ln55_39 | add | fabric | 0       |
+|   add_256ns_256ns_256_2_1_U221            |       |        | add_ln6     | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U223             |       |        | add_ln7     | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U240            |       |        | add_ln6_23  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U260             |       |        | add_ln7_24  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U241            |       |        | add_ln6_24  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U262             |       |        | add_ln7_25  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U242            |       |        | add_ln6_25  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U264             |       |        | add_ln7_26  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U243            |       |        | add_ln6_26  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U266             |       |        | add_ln7_27  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U244            |       |        | add_ln6_27  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U268             |       |        | add_ln7_28  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U245            |       |        | add_ln6_28  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U270             |       |        | add_ln7_29  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U246            |       |        | add_ln6_29  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U272             |       |        | add_ln7_30  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U247            |       |        | add_ln6_30  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U274             |       |        | add_ln7_31  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U248            |       |        | add_ln6_31  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U276             |       |        | add_ln7_32  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U249            |       |        | add_ln6_32  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U278             |       |        | add_ln7_33  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U250            |       |        | add_ln6_33  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U280             |       |        | add_ln7_34  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U251            |       |        | add_ln6_34  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U282             |       |        | add_ln7_35  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U252            |       |        | add_ln6_35  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U284             |       |        | add_ln7_36  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U253            |       |        | add_ln6_36  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U286             |       |        | add_ln7_37  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U224            |       |        | add_ln6_37  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U226             |       |        | add_ln7_38  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U227            |       |        | add_ln6_38  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U229             |       |        | add_ln7_39  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U254            |       |        | add_ln6_39  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U288             |       |        | add_ln7_40  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U255            |       |        | add_ln6_40  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U290             |       |        | add_ln7_41  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U230            |       |        | add_ln6_41  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U232             |       |        | add_ln7_42  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U233            |       |        | add_ln6_42  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U235             |       |        | add_ln7_43  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U236            |       |        | add_ln6_43  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U238             |       |        | add_ln7_44  | add | fabric | 1       |
+|   add_256ns_256ns_256_2_1_U239            |       |        | add_ln6_44  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U257             |       |        | add_ln7_45  | add | fabric | 1       |
+|   add_ln55_40_fu_2426_p2                  |       |        | add_ln55_40 | add | fabric | 0       |
+|   add_256ns_256ns_256_2_1_U258            |       |        | add_ln6_45  | add | fabric | 1       |
+|   add_256ns_256s_256_2_1_U292             |       |        | add_ln7_46  | add | fabric | 1       |
+|  + poseidon_top_Pipeline_VITIS_LOOP_42_1  | 0     |        |             |     |        |         |
+|    add_ln42_fu_294_p2                     |       |        | add_ln42    | add | fabric | 0       |
+|  + poseidon_top_Pipeline_VITIS_LOOP_92_3  | 0     |        |             |     |        |         |
+|    add_ln92_fu_305_p2                     |       |        | add_ln92    | add | fabric | 0       |
+|  + sbox_quintic (grp_sbox_quintic_fu_844) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_849) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_854) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_859) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_864) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_869) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_874) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_879) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_884) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_889) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_894) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_899) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_904) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_909) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_914) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_919) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_924) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_929) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_934) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_939) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_944) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_949) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + sbox_quintic (grp_sbox_quintic_fu_954) | 915   |        |             |     |        |         |
+|    mul_256ns_256ns_512_5_1_U27            | 225   |        | mul         | mul | auto   | 4       |
+|    mul_510s_510s_510_5_1_U28              | 465   |        | mul_1       | mul | auto   | 4       |
+|    mul_256ns_256ns_511_5_1_U26            | 225   |        | mul_2       | mul | auto   | 4       |
+|  + poseidon_top_Pipeline_mds_row          | 450   |        |             |     |        |         |
+|    add_ln73_fu_962_p2                     |       |        | add_ln73    | add | fabric | 0       |
+|    sub_ln73_fu_992_p2                     |       |        | sub_ln73    | sub | fabric | 0       |
+|    add_ln78_fu_1002_p2                    |       |        | add_ln78    | add | fabric | 0       |
+|    add_ln78_1_fu_1027_p2                  |       |        | add_ln78_1  | add | fabric | 0       |
+|    add_ln78_2_fu_1055_p2                  |       |        | add_ln78_2  | add | fabric | 0       |
+|    add_ln78_3_fu_1079_p2                  |       |        | add_ln78_3  | add | fabric | 0       |
+|    add_ln78_4_fu_1103_p2                  |       |        | add_ln78_4  | add | fabric | 0       |
+|    add_ln78_5_fu_1127_p2                  |       |        | add_ln78_5  | add | fabric | 0       |
+|    add_ln78_6_fu_1151_p2                  |       |        | add_ln78_6  | add | fabric | 0       |
+|    add_ln78_7_fu_1175_p2                  |       |        | add_ln78_7  | add | fabric | 0       |
+|    mul_256ns_255ns_511_5_1_U39            | 225   |        | mul         | mul | auto   | 4       |
+|    add_255ns_255ns_255_2_1_U66            |       |        | add_ln7     | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_3       | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U67            |       |        | add_ln6     | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U69             |       |        | add_ln7_1   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_4       | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U70            |       |        | add_ln6_1   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U72             |       |        | add_ln7_2   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_5       | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U73            |       |        | add_ln6_2   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U75             |       |        | add_ln7_3   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_6       | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U76            |       |        | add_ln6_3   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U78             |       |        | add_ln7_4   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_7       | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U79            |       |        | add_ln6_4   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U81             |       |        | add_ln7_5   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_8       | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U82            |       |        | add_ln6_5   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U84             |       |        | add_ln7_6   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_9       | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U85            |       |        | add_ln6_6   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U87             |       |        | add_ln7_7   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_10      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U88            |       |        | add_ln6_7   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U90             |       |        | add_ln7_8   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_11      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U91            |       |        | add_ln6_8   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U93             |       |        | add_ln7_9   | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_12      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U94            |       |        | add_ln6_9   | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U96             |       |        | add_ln7_10  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_13      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U97            |       |        | add_ln6_10  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U99             |       |        | add_ln7_11  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_14      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U100           |       |        | add_ln6_11  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U102            |       |        | add_ln7_12  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_15      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U103           |       |        | add_ln6_12  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U105            |       |        | add_ln7_13  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_16      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U106           |       |        | add_ln6_13  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U108            |       |        | add_ln7_14  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_17      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U109           |       |        | add_ln6_14  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U111            |       |        | add_ln7_15  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_18      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U112           |       |        | add_ln6_15  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U114            |       |        | add_ln7_16  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_19      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U115           |       |        | add_ln6_16  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U117            |       |        | add_ln7_17  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_20      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U118           |       |        | add_ln6_17  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U120            |       |        | add_ln7_18  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_21      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U121           |       |        | add_ln6_18  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U123            |       |        | add_ln7_19  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_22      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U124           |       |        | add_ln6_19  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U126            |       |        | add_ln7_20  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_23      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U127           |       |        | add_ln6_20  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U129            |       |        | add_ln7_21  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_24      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U130           |       |        | add_ln6_21  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U132            |       |        | add_ln7_22  | add | fabric | 1       |
+|    mul_256ns_256ns_512_5_1_U40            | 225   |        | mul_25      | mul | auto   | 4       |
+|    add_256ns_256ns_256_2_1_U133           |       |        | add_ln6_22  | add | fabric | 1       |
+|    add_256ns_256s_256_2_1_U135            |       |        | add_ln7_23  | add | fabric | 1       |
++-------------------------------------------+-------+--------+-------------+-----+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| Name              | Usage     | Type      | BRAM | URAM | Pragma | Variable | Impl | Latency | Bitwidth, Depth, |
+|                   |           |           |      |      |        |          |      |         | Banks            |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+| + poseidon_top    |           |           | 30   | 0    |        |          |      |         |                  |
+|   control_s_axi_U | interface | s_axilite |      |      |        |          |      |         |                  |
+|   gmem_m_axi_U    | interface | m_axi     | 30   |      |        |          |      |         |                  |
++-------------------+-----------+-----------+------+------+--------+----------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------------+-----------------------------------------+--------------------------------------------------+
+| Type            | Options                                 | Location                                         |
++-----------------+-----------------------------------------+--------------------------------------------------+
+| interface       | axis port=in_stream                     | poseidon.cpp:32 in poseidon_top, in_stream       |
+| interface       | axis port=out_stream                    | poseidon.cpp:33 in poseidon_top, out_stream      |
+| interface       | s_axilite port=return                   | poseidon.cpp:34 in poseidon_top, return          |
+| interface       | m_axi port=round_constants offset=slave | poseidon.cpp:35 in poseidon_top, round_constants |
+| interface       | m_axi port=mds_matrix offset=slave      | poseidon.cpp:36 in poseidon_top, mds_matrix      |
+| array_partition | variable=state complete                 | poseidon.cpp:39 in poseidon_top, state           |
+| pipeline        | II=1                                    | poseidon.cpp:43 in poseidon_top                  |
+| unroll          |                                         | poseidon.cpp:54 in poseidon_top                  |
+| unroll          |                                         | poseidon.cpp:60 in poseidon_top                  |
+| array_partition | variable=next_state complete            | poseidon.cpp:71 in poseidon_top, next_state      |
+| pipeline        | II=1                                    | poseidon.cpp:74 in poseidon_top                  |
+| unroll          |                                         | poseidon.cpp:77 in poseidon_top                  |
+| unroll          |                                         | poseidon.cpp:86 in poseidon_top                  |
+| pipeline        | II=1                                    | poseidon.cpp:93 in poseidon_top                  |
++-----------------+-----------------------------------------+--------------------------------------------------+
+
+

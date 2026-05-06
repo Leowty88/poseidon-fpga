@@ -1,0 +1,123 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'sbox_quintic'" level="0">
+<item name = "Date">Wed May  6 11:50:38 2026
+</item>
+<item name = "Version">2023.2 (Build 4023990 on Oct 11 2023)</item>
+<item name = "Project">poseidon_hls</item>
+<item name = "Solution">solution1 (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 6.978 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">1559, 1559, 15.590 us, 15.590 us, 1559, 1559, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, -, -, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, 915, 3660, 2175, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 2702, -</column>
+<column name="Register">-, -, 4368, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 415, 7, 9, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP, FF, LUT, URAM</keys>
+<column name="mul_256ns_256ns_511_5_1_U26">mul_256ns_256ns_511_5_1, 0, 225, 441, 256, 0</column>
+<column name="mul_256ns_256ns_512_5_1_U27">mul_256ns_256ns_512_5_1, 0, 225, 441, 256, 0</column>
+<column name="mul_510s_510s_510_5_1_U28">mul_510s_510s_510_5_1, 0, 465, 441, 256, 0</column>
+<column name="urem_510ns_256ns_510_514_seq_1_U30">urem_510ns_256ns_510_514_seq_1, 0, 0, 779, 469, 0</column>
+<column name="urem_511ns_256ns_255_515_seq_1_U31">urem_511ns_256ns_255_515_seq_1, 0, 0, 779, 469, 0</column>
+<column name="urem_512ns_256ns_510_516_seq_1_U29">urem_512ns_256ns_510_516_seq_1, 0, 0, 779, 469, 0</column>
+</table>
+</item>
+<item name = "DSP"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">2693, 1561, 1, 1561</column>
+<column name="ap_return">9, 2, 255, 510</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">1560, 0, 1560, 0</column>
+<column name="ap_return_preg">255, 0, 255, 0</column>
+<column name="mul_1_reg_93">510, 0, 510, 0</column>
+<column name="mul_2_reg_113">511, 0, 511, 0</column>
+<column name="mul_reg_77">512, 0, 512, 0</column>
+<column name="x2_reg_82">510, 0, 510, 0</column>
+<column name="x4_reg_98">510, 0, 510, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, sbox_quintic, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, sbox_quintic, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, sbox_quintic, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, sbox_quintic, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, sbox_quintic, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, sbox_quintic, return value</column>
+<column name="ap_return">out, 255, ap_ctrl_hs, sbox_quintic, return value</column>
+<column name="x_val">in, 256, ap_none, x_val, scalar</column>
+</table>
+</item>
+</section>
+</profile>

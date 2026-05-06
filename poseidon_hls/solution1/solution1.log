@@ -1,0 +1,200 @@
+==============================================================
+Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+Tool Version Limit: 2023.10
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+==============================================================
+INFO: [HLS 200-1505] Using default flow_target 'vivado'
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1510] Running: csim_design -argv /home/bcs7944/poseidon-fpga/data 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 6.82 seconds. CPU system time: 0.57 seconds. Elapsed time: 7.82 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.1 seconds; current allocated memory: 275.227 MB.
+INFO: [HLS 200-10] Analyzing design file 'poseidon.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.65 seconds. CPU system time: 0.56 seconds. Elapsed time: 3.36 seconds; current allocated memory: 278.566 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 200-1995] There were 2,250 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 5,417 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 3,210 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 4,060 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,385 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,574 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,404 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,428 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,452 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,506 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 2,039 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,841 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,841 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,695 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,791 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 1,710 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/bcs7944/poseidon-fpga/poseidon_hls/solution1/syn/report/csynth_design_size.rpt
+INFO: [HLS 214-291] Loop 'mds_col' is marked as complete unroll implied by the pipeline pragma (poseidon.cpp:76:22)
+INFO: [HLS 214-186] Unrolling loop 'rc_add' (poseidon.cpp:53:17) in function 'poseidon_top' completely with a factor of 24 (poseidon.cpp:31:0)
+INFO: [HLS 214-186] Unrolling loop 'sbox_layer' (poseidon.cpp:59:21) in function 'poseidon_top' completely with a factor of 24 (poseidon.cpp:31:0)
+INFO: [HLS 214-186] Unrolling loop 'mds_col' (poseidon.cpp:76:22) in function 'poseidon_top' completely with a factor of 24 (poseidon.cpp:31:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_85_2' (poseidon.cpp:85:26) in function 'poseidon_top' completely with a factor of 24 (poseidon.cpp:31:0)
+INFO: [HLS 214-178] Inlining function 'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)' into 'sbox_quintic(ap_uint<256>)' (poseidon.cpp:20:0)
+INFO: [HLS 214-248] Applying array_partition to 'state': Complete partitioning on dimension 1. (poseidon.cpp:38:10)
+INFO: [HLS 214-248] Applying array_partition to 'next_state': Complete partitioning on dimension 1. (poseidon.cpp:70:17)
+INFO: [HLS 214-241] Aggregating maxi variable 'mds_matrix' with compact=none mode in 256-bits
+INFO: [HLS 214-364] Automatically inlining function 'mod_mul(ap_uint<256>, ap_uint<256>) (.3.6.10)' to improve effectiveness of pipeline pragma in function 'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])' (poseidon.cpp:78:17)
+INFO: [HLS 214-364] Automatically inlining function 'mod_add(ap_uint<256>, ap_uint<256>)' to improve effectiveness of pipeline pragma in function 'poseidon_top(hls::stream<axis_word, 0>&, hls::stream<axis_word, 0>&, ap_uint<256>*, ap_uint<256> (*) [24])' (poseidon.cpp:79:23)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4.06 seconds. CPU system time: 0.49 seconds. Elapsed time: 8.23 seconds; current allocated memory: 281.367 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 281.367 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 282.992 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 283.188 MB.
+INFO: [XFORM 203-602] Inlining function 'mod_add' into 'poseidon_top' (poseidon.cpp:55) automatically.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.31 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.33 seconds; current allocated memory: 308.312 MB.
+WARNING: [HLS 200-960] Cannot flatten loop 'permutation_loop' (poseidon.cpp:50:23) in function 'poseidon_top' the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.21 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.24 seconds; current allocated memory: 344.078 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'poseidon_top' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poseidon_top_Pipeline_VITIS_LOOP_42_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.21 seconds; current allocated memory: 345.754 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.09 seconds; current allocated memory: 345.754 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sbox_quintic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 348.129 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.17 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.22 seconds; current allocated memory: 362.117 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poseidon_top_Pipeline_mds_row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'mds_row'.
+WARNING: [HLS 200-885] The II Violation in module 'poseidon_top_Pipeline_mds_row' (loop 'mds_row'): Unable to schedule bus request operation ('gmem_load_25_req', poseidon.cpp:78) on port 'gmem' (poseidon.cpp:78) due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'poseidon_top_Pipeline_mds_row' (loop 'mds_row'): Unable to schedule bus request operation ('gmem_load_26_req', poseidon.cpp:78) on port 'gmem' (poseidon.cpp:78) due to limited memory ports (II = 2). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'poseidon_top_Pipeline_mds_row' (loop 'mds_row'): Unable to schedule bus request operation ('gmem_load_27_req', poseidon.cpp:78) on port 'gmem' (poseidon.cpp:78) due to limited memory ports (II = 3). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'poseidon_top_Pipeline_mds_row' (loop 'mds_row'): Unable to schedule bus request operation ('gmem_load_28_req', poseidon.cpp:78) on port 'gmem' (poseidon.cpp:78) due to limited memory ports (II = 4). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'poseidon_top_Pipeline_mds_row' (loop 'mds_row'): Unable to schedule bus request operation ('gmem_load_43_req', poseidon.cpp:78) on port 'gmem' (poseidon.cpp:78) due to limited memory ports (II = 19). Please consider using a memory core with more ports or partitioning the array.
+WARNING: [HLS 200-885] The II Violation in module 'poseidon_top_Pipeline_mds_row' (loop 'mds_row'): Unable to schedule bus request operation ('gmem_load_47_req', poseidon.cpp:78) on port 'gmem' (poseidon.cpp:78) due to limited memory ports (II = 23). Please consider using a memory core with more ports or partitioning the array.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 24, Depth = 601, loop 'mds_row'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.44 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.52 seconds; current allocated memory: 391.738 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.51 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.62 seconds; current allocated memory: 406.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poseidon_top_Pipeline_VITIS_LOOP_92_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_92_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_92_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.45 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.59 seconds; current allocated memory: 407.273 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 407.273 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'poseidon_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.2 seconds; current allocated memory: 412.727 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.11 seconds; current allocated memory: 412.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poseidon_top_Pipeline_VITIS_LOOP_42_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'poseidon_top_Pipeline_VITIS_LOOP_42_1' is 6149, found 2 HDL expressions with this fanout: (ap_loop_init == 1'b1), (1'b1 == ap_CS_fsm_state1)
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poseidon_top_Pipeline_VITIS_LOOP_42_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 412.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sbox_quintic' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mul_256ns_256ns_511_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_256ns_256ns_512_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_510s_510s_510_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_510ns_256ns_510_514_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_511ns_256ns_255_515_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_512ns_256ns_510_516_seq_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'sbox_quintic'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.5 seconds; current allocated memory: 434.137 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poseidon_top_Pipeline_mds_row' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'poseidon_top_Pipeline_mds_row' pipeline 'mds_row' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'poseidon_top_Pipeline_mds_row' is 13912 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))
+INFO: [RTGEN 206-100] Generating core module 'add_255ns_255ns_255_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'add_256ns_256ns_256_2_1': 23 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'add_256ns_256s_256_2_1': 23 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'icmp_255ns_255ns_1_2_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'icmp_256ns_256ns_1_2_1': 23 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_256ns_255ns_511_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_256ns_256ns_512_5_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_511ns_256ns_255_515_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_512ns_256ns_256_516_1': 23 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poseidon_top_Pipeline_mds_row'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.84 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.04 seconds; current allocated memory: 453.727 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poseidon_top_Pipeline_VITIS_LOOP_92_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'poseidon_top_Pipeline_VITIS_LOOP_92_3' pipeline 'VITIS_LOOP_92_3' pipeline type 'loop pipeline'
+INFO: [HLS 200-1553] Disabling free running pipeline (frp) architecture on pipeline 'VITIS_LOOP_92_3' in module 'poseidon_top_Pipeline_VITIS_LOOP_92_3', because the estimated Stream Port Number is 27, which is bigger than the frp_stream_port_number threshold of 20.
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_49_5_256_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poseidon_top_Pipeline_VITIS_LOOP_92_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.7 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.93 seconds; current allocated memory: 483.766 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'poseidon_top' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'poseidon_top/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'poseidon_top/in_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'poseidon_top/out_stream' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'poseidon_top/round_constants' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'poseidon_top/mds_matrix' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'poseidon_top' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'round_constants', 'mds_matrix' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'poseidon_top' is 5888, found 2 HDL expressions with this fanout: ((or_ln62_reg_2918 == 1'd1) & (1'b1 == ap_CS_fsm_state42) & (1'b0 == ap_block_state42_on_subcall_done)), ((or_ln62_reg_2918 == 1'd0) & (1'b1 == ap_CS_fsm_state40))
+INFO: [RTGEN 206-100] Generating core module 'add_256ns_256ns_256_2_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'add_256ns_256s_256_2_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'icmp_256ns_256ns_1_2_1': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'poseidon_top'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.16 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.29 seconds; current allocated memory: 483.766 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.42 seconds. CPU system time: 0.11 seconds. Elapsed time: 1.2 seconds; current allocated memory: 493.375 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.61 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.88 seconds; current allocated memory: 501.594 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for poseidon_top.
+INFO: [VLOG 209-307] Generating Verilog RTL for poseidon_top.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 108.21 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 16.65 seconds. CPU system time: 1.57 seconds. Elapsed time: 24.23 seconds; current allocated memory: 226.855 MB.
