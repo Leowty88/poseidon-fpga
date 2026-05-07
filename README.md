@@ -546,6 +546,23 @@ FINAL SCORE: N/N (100.00%)
 SUCCESS: All hardware results match the golden model!
 ```
 
+Poseidon HLS Verification Summary
+
+Golden file: poseidon_golden_results.csv
+Hardware/HLS file: hw_results.csv
+
+Number of test cases checked: 20
+Hash output checked: lane 1
+Full final state checked: all 24 lanes
+
+Result:
+PASS - all hardware/HLS outputs matched the Python golden model.
+
+The committed CSV result files are non-empty:
+- `hw_results.csv`: HLS testbench output
+- `poseidon_golden_results.csv`: Python golden model output
+- `verification_output.txt`: human-readable pass/fail comparison summary
+
 ---
 
 ## 10. How to Reproduce the Results
