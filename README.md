@@ -646,7 +646,7 @@ hw_results.csv
 The C synthesis report is located at:
 
 ```text
-poseidon_hls/solution1/syn/report/csynth.rpt
+reports/csynth.rpt
 ```
 
 ### Step 5: Verify HLS results against the golden model
