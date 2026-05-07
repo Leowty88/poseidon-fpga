@@ -1,0 +1,15 @@
+# Vitis/Vivado generated project files
+poseidon_hls/
+.vitis_hls/
+*.log
+*.jou
+*.str
+*.wdb
+*.vcd
+xsim.dir/
+
+# Keep intentional evidence files
+!reports/
+!reports/*.rpt
+!reports/*.txt
+!verification_output.txt
