@@ -684,7 +684,6 @@ SUCCESS: All hardware results match the golden model!
 ### Limitations / Future Work
 
 - The committed result CSV files should be non-empty and should show the tested output vectors.
-- Add a committed text log of `python3 verify_results.py` showing PASS/FAIL results.
 - Add RTL co-simulation with `cosim_design`.
 - Move round constants and the MDS matrix from AXI master memory into on-chip ROM/BRAM.
 - Reduce full unrolling of expensive modular arithmetic.
