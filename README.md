@@ -1,3 +1,22 @@
+## Grader Notes / Files to Inspect
+
+The main files to inspect are:
+
+| File | Purpose |
+|---|---|
+| `README.md` | Main project documentation, interface definition, architecture, verification summary, synthesis/resource summary, and reproduction steps |
+| `poseidon.hpp` | Top-level HLS interface declaration, AXI-stream word type, Poseidon constants, and field type definitions |
+| `poseidon.cpp` | HLS implementation of the Poseidon permutation accelerator |
+| `poseidon_tb.cpp` | C++ HLS testbench that drives the AXI4-Stream input/output interfaces |
+| `golden_model.py` | Python golden model used to generate expected Poseidon outputs |
+| `verify_results.py` | Script that compares HLS output against the golden model |
+| `hw_results.csv` | Output produced by the HLS C simulation |
+| `poseidon_golden_results.csv` | Expected output from the golden model |
+| `verification_output.txt` | Human-readable PASS/FAIL verification result |
+| `reports/csynth.rpt` | Vitis HLS synthesis report |
+
+This repository documents the IP interface, mathematical operations, dataflow, HLS architecture, verification methodology, synthesis results, and known limitations of the current implementation.
+
 # Poseidon FPGA HLS Accelerator
 
 ## Project Overview
@@ -561,7 +580,6 @@ PASS - all hardware/HLS outputs matched the Python golden model.
 The committed CSV result files are non-empty:
 - `hw_results.csv`: HLS testbench output
 - `poseidon_golden_results.csv`: Python golden model output
-- `verification_output.txt`: human-readable pass/fail comparison summary
 
 ---
 
