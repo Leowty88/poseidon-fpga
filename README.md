@@ -2,18 +2,23 @@
 
 The main files to inspect are:
 
-| File | Purpose |
+## Repository Contents
+
+| File / Directory | Description |
 |---|---|
-| `README.md` | Main project documentation, interface definition, architecture, verification summary, synthesis/resource summary, and reproduction steps |
-| `poseidon.hpp` | Top-level HLS interface declaration, AXI-stream word type, Poseidon constants, and field type definitions |
-| `poseidon.cpp` | HLS implementation of the Poseidon permutation accelerator |
-| `poseidon_tb.cpp` | C++ HLS testbench that drives the AXI4-Stream input/output interfaces |
-| `golden_model.py` | Python golden model used to generate expected Poseidon outputs |
-| `verify_results.py` | Script that compares HLS output against the golden model |
-| `hw_results.csv` | Output produced by the HLS C simulation |
-| `poseidon_golden_results.csv` | Expected output from the golden model |
-| `verification_output.txt` | Human-readable PASS/FAIL verification result |
-| `reports/csynth.rpt` | Vitis HLS synthesis report |
+| `poseidon.hpp` | Main type definitions, Poseidon parameters, AXI-stream word structure, and top-level function declaration |
+| `poseidon.cpp` | HLS implementation of the Poseidon accelerator |
+| `poseidon_tb.cpp` | C++ HLS testbench that drives AXI-stream input/output and writes hardware results |
+| `golden_model.py` | Python golden model used to generate expected Poseidon results |
+| `verify_results.py` | Python script that compares HLS output against the golden-model output |
+| `generate_constants.py` | Script for generating Poseidon constants and/or test data |
+| `data/` | Input constants and test cases for the HLS testbench |
+| `run_hls.tcl` | Vitis HLS script for running C simulation and C synthesis |
+| `hw_results.csv` | HLS C simulation output results |
+| `poseidon_golden_results.csv` | Expected results from the Python golden model |
+| `verification_output.txt` | Human-readable verification result showing all 20 test cases passing |
+| `reports/csynth.rpt` | Vitis HLS C synthesis report |
+| `plan.md` | Project planning and architecture notes |
 
 This repository documents the IP interface, mathematical operations, dataflow, HLS architecture, verification methodology, synthesis results, and known limitations of the current implementation.
 
@@ -43,7 +48,7 @@ This implementation is a functional HLS prototype. It implements the core Poseid
 | `run_hls.tcl` | Vitis HLS script for running C simulation and C synthesis |
 | `hw_results.csv` | HLS C simulation output results |
 | `poseidon_golden_results.csv` | Expected results from the Python golden model |
-| `poseidon_hls/solution1/syn/report/csynth.rpt` | Vitis HLS C synthesis report |
+| `reports/csynth.rpt` | Vitis HLS C synthesis report |
 | `plan.md` | Project planning and architecture notes |
 
 ---
