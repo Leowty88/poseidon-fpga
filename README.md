@@ -34,6 +34,10 @@ This implementation is a functional HLS prototype. It implements the core Poseid
 
 ---
 
+## Slideshow
+
+https://docs.google.com/presentation/d/1XDmXZic-o1c5l8FSwdZ2HijTtrAEK2o5sHdaej3uogw/edit?usp=sharing 
+
 ## Repository Contents
 
 | File / Directory | Description |
